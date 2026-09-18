@@ -1,0 +1,8 @@
+com/vehicleservice/IntegrationWorkflowTest.class
+com/vehicleservice/ServiceDAOTest.class
+com/vehicleservice/VehicleDAOTest.class
+com/vehicleservice/CustomerDAOTest.class
+com/vehicleservice/ValidationUtilTest.class
+com/vehicleservice/TestSuiteRunner.class
+com/vehicleservice/BillingServiceTest.class
+com/vehicleservice/DatabaseErrorHandlingTest.class
