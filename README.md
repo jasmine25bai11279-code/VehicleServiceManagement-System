@@ -110,7 +110,6 @@ Data Access Object (DAO) Layer (CustomerDAO, VehicleDAO, ServiceDAO, BillDAO, Us
 Persistence Layer (SQLite Database: vehicleservice.db with Foreign Keys & ACID)
 ```
 
-See [docs/system_architecture.md](file:///Users/arihantjain/.gemini/antigravity/scratch/Vehicle-Service-Management-System/docs/system_architecture.md) for full architecture diagrams.
 
 ---
 
@@ -207,9 +206,7 @@ The SQLite database (`vehicleservice.db`) incorporates foreign key referential i
 - **Service Record 1 ➔ Many Service Items**: A service job can consume multiple spare parts and fluids.
 - **Service Record 1 ➔ 1 Bill**: Each completed service job has exactly one generated tax invoice.
 
-See [docs/er_diagram.md](file:///Users/arihantjain/.gemini/antigravity/scratch/Vehicle-Service-Management-System/docs/er_diagram.md) for the ER diagram.
 
----
 
 ## 🚀 8. Installation & Setup
 
@@ -220,10 +217,7 @@ See [docs/er_diagram.md](file:///Users/arihantjain/.gemini/antigravity/scratch/V
 
 ### Clone / Locate the Project
 ```bash
-cd /Users/arihantjain/.gemini/antigravity/scratch/Vehicle-Service-Management-System
-```
-
----
+c
 
 ## ▶️ 9. How to Run the Application
 
@@ -260,16 +254,7 @@ The application includes an exhaustive test suite of **31 JUnit 5 tests** verify
 java -cp "target/classes:target/test-classes:$(./mvnw dependency:build-classpath | grep -A 1 'Dependencies classpath:' | tail -n 1)" com.vehicleservice.TestSuiteRunner
 ```
 
-### Test Suite Coverage
-| Test Class | Category | What is Verified |
-| :--- | :--- | :--- |
-| [`CustomerDAOTest`](file:///Users/arihantjain/.gemini/antigravity/scratch/Vehicle-Service-Management-System/src/test/java/com/vehicleservice/CustomerDAOTest.java) | DAO Unit Test | Insert, update, delete, ID lookup, name/phone search |
-| [`VehicleDAOTest`](file:///Users/arihantjain/.gemini/antigravity/scratch/Vehicle-Service-Management-System/src/test/java/com/vehicleservice/VehicleDAOTest.java) | DAO Unit Test | Vehicle CRUD, customer association, duplicate plate rejection |
-| [`ServiceDAOTest`](file:///Users/arihantjain/.gemini/antigravity/scratch/Vehicle-Service-Management-System/src/test/java/com/vehicleservice/ServiceDAOTest.java) | DAO Unit Test | Status transitions, line item persistence, automatic parts rollup |
-| [`BillingServiceTest`](file:///Users/arihantjain/.gemini/antigravity/scratch/Vehicle-Service-Management-System/src/test/java/com/vehicleservice/BillingServiceTest.java) | Service Math | Parts sum, labor additions, 18% GST calculation, negative price rejection |
-| [`ValidationUtilTest`](file:///Users/arihantjain/.gemini/antigravity/scratch/Vehicle-Service-Management-System/src/test/java/com/vehicleservice/ValidationUtilTest.java) | Utilities | Phone regex, email formatting, year ranges, non-empty fields |
-| [`DatabaseErrorHandlingTest`](file:///Users/arihantjain/.gemini/antigravity/scratch/Vehicle-Service-Management-System/src/test/java/com/vehicleservice/DatabaseErrorHandlingTest.java) | DB Resilience | Foreign key integrity violation, check constraint violation |
-| [`IntegrationWorkflowTest`](file:///Users/arihantjain/.gemini/antigravity/scratch/Vehicle-Service-Management-System/src/test/java/com/vehicleservice/IntegrationWorkflowTest.java) | End-to-End | Complete business lifecycle: Customer ➔ Vehicle ➔ Service ➔ Parts ➔ Completion ➔ Bill ➔ Payment |
+
 
 ---
 
